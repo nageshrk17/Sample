@@ -1,0 +1,63 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Age calculator</title>
+
+<script language="javascript">
+
+function calculateAge()
+{
+	var a = document.form.birthyear.value;
+	var date = new Date();
+	var year =  date.getFullYear();
+	var age = year-a;  
+	document.form.result.value = age;
+	
+}
+</script>
+
+<style type="text/css">
+#bg
+{
+	background-color:lawngreen;
+	width:1350px;
+	height:600px;
+	padding-top:50px;
+}
+</style>
+</head>
+
+<body>
+<div id="bg">
+<center>
+<fieldset>
+<form name=form >
+<table> <i><b>Please enter your year of birth below</b></i><br />
+<br />
+<tr>
+<td><b>Year of Birth</b>: <input type='text' name='birthyear' /> <br /></td></tr>
+<tr><td>
+
+<b>Current Year: </b>
+<script language="javascript">
+
+var today = new Date();
+document.writeln("<b>"+today.getFullYear()+"</b>");
+
+</script> <br /></td></tr>
+
+
+<tr><td><input type="button" value="Display Age" onclick='calculateAge(form);'/><br />
+<br />
+</td>
+</tr>
+<tr><td><b>Age:</b><input type="text" name="result" disabled='disabled'> </td></tr> </table>
+
+</form>
+</fieldset>
+</center>
+</div>
+</body>
+</html>
+

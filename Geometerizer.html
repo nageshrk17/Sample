@@ -1,0 +1,54 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Find the area and circumference of a circle</title>
+<script language="JavaScript">
+	    function calcArea()
+{
+	        var radius =document.form.radius.value;
+	        document.write("<center><b>The Area of the Circle is " + (radius * radius * Math.PI) + 								"</b></center>");
+}
+	   
+       function calcCircumference()
+{
+	        var radius =document.form.radius.value;
+	    
+	        document.write("<center><b>The Circumference of the Circle is " + (2 * radius * Math.PI) + 							"</b></center>");
+}
+</script>
+
+<style type="text/css">
+#bg
+{
+	background-color:gold;
+	width:1350px;
+	height:600px;
+	padding-top:50px;
+}
+</style>
+</head>
+
+<body>
+<div id="bg">
+<center>
+<fieldset>
+<form name=form >
+
+      <i><b> Enter the radius of circle: </b></i>
+	    <table>   
+		<tr><td>
+		<input type="text" name="radius" size="8"></td></tr>  
+	  </table>
+                   <br/>
+
+<i><b>To Calculate the Area:  <input type="button" value="Area" onClick='calcArea();'> </b></i><br/> 
+	<br/>
+ <i><b>To Calculate the Circumference:  <input type="button" value="Circumference" onClick='calcCircumference();'>  </b></i>
+          
+</form>
+</fieldset>
+</center>
+</div>
+</body>
+</html>

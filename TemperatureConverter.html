@@ -1,0 +1,63 @@
+<html>
+<meta charset="utf-8">
+<script language="JavaScript">
+
+function fahrenheitToCelsius(form)
+{
+	var tempVal, finalF, finalTemp;
+	tempVal = form.yourInput.value;
+   	finalF = (tempVal - 32) * 5 / 9;
+   	finalTemp= Math.round(finalF)  + " degrees Celsius";	
+	form.result.value = finalTemp;
+}
+function celsiusToFahrenheit(form)
+{
+	var tempVal, finalC, finalTemp;
+	tempVal = form.yourInput.value;
+   	 finalC = (tempVal * 9 / 5) + 32;
+    	finalTemp = Math.round(finalC)  + " degrees Fahrenheit";
+	form.result.value = finalTemp;	
+}
+
+</script>
+<style type="text/css">
+#bg
+{
+	background-color:chocolate;
+	width: 1350px;
+ 	 height: 600px;
+	padding-top:40px;
+}
+</style>
+<body>
+<div id="bg">
+<center>
+<fieldset>
+ <i><b>Enter the Fahrenheit temperature to convert to Celcius:</b></i><br>
+<br>
+<form name="abc">
+<b>Fahrenheit: </b><input type="text" name="yourInput" onChange="fahrenheitToCelsius(form);"><br />
+<br>
+  <b>Is equal to:</b>
+  <br><br>	<input type="text" name="result" disabled='disabled'>
+</form>
+</fieldset>
+<br/>
+<hr align="center" size="3">
+<br/>
+<fieldset>
+
+<i><b>Enter the Celsius temperature to convert to Fahrenheit:</b></i><br>
+<br>
+<form name="converter">
+<b>Celsius:</b> <input type="text" name="yourInput" onChange="celsiusToFahrenheit(form);"><br />
+<br>
+  <b>Is equal to:</b>
+  <br><br>
+                 <input type="text" name="result" disabled='disabled'>
+</form>
+</fieldset>
+</center>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>The lifetime supply calculator</title>
+
+<script language="javascript">
+function calculateSupply()
+{
+	var maxAge=85;
+	var age= document.form.age.value;
+	var numPerDay= document.form.day.value;
+	
+	var totalNeeded=(numPerDay *365)*(maxAge-age);
+	 
+	document.write("<center><b>You will need " +Math.round(totalNeeded) +" to last you until the ripe old age of " + maxAge 			+"</b></center>");
+	
+}
+</script>
+  
+<style type="text/css">
+#bg
+{
+	background-color:limegreen;
+	width:1350px;
+	height:600px;
+	padding-top:50px;
+}
+</style>
+</head>
+<body>
+<div id="bg">
+
+<center>
+<fieldset>
+<form name=form >
+<table >
+
+<tr>
+<td><b>Enter your Age:</b></td>
+<td><input type="text" name="age" ></td></tr>
+  <br/>
+<tr><td><b>Enter the Quantity:</b></td>
+<td><input type="text" name="day" ></td><br/>
+
+
+</tr></table><p><b><i>* Quantity =  The number of Packets(Snacks) you consume daily</i> </b></p>
+
+<input type="button" value="Submit" onClick='calculateSupply();'>  
+
+
+</form>
+</fieldset>
+</center>
+</div>
+</body>
+</html>
